@@ -1,5 +1,5 @@
 ﻿var lb = new Library.Library();
-var cs = new CoffeShop.CoffeShop();
+var hangman = new Hangman.Hangman();
 
 bool isRunning = true;
 
@@ -62,7 +62,7 @@ while (isRunning)
     // 3 = placeholder
 
     InputType(1, 2, "Library");
-    InputType(2, 2, "CoffeShop");
+    InputType(2, 1, "Hangman");
     Console.WriteLine("9. Exit");
 
 
@@ -84,7 +84,7 @@ while (isRunning)
             lb.Start();
             break;
         case 2:
-            cs.Start();
+            hangman.Start();
             break;
         case 9:
             Console.WriteLine("\nBye, thanks for trying my code.");
