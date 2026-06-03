@@ -97,11 +97,16 @@ public class Hangman
         |
     ========="
     };
-
-    public void Start()
+    string WordSelector()
     {
         var random = new Random();
         string selectedWord = words[random.Next(words.Length)].ToLower();
+        return selectedWord;
+    }
+    public void Start()
+    {
+        string selectedWord = WordSelector();
+        // Making the word into "_" for each letter in the selectedWord
         char[] shownWord = new string('_', selectedWord.Length).ToCharArray();
 
         List<char> wrongGuesses = new List<char>();
